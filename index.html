@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>~/startpage</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        const transferToDDG = () => {
+            let content = document.querySelector('input.searchField').value;
+            window.open(`https://duckduckgo.com/search?q=${content}`, '_self')
+        }
+
+        const postLoad = () => {
+            const delegateSubmission = (event) => {
+                if (event.keyCode == 13) {
+                    transferToDDG();
+                }
+            }
+            document.addEventListener('keydown', delegateSubmission);
+        }
+
+        document.addEventListener('DOMContentLoaded', postLoad);
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-container">
+            <div class="gif">
+                <img src="pfp.png" />
+            </div>
+        </div>
+
+        <div class="right-container">
+            <div class="head">
+                <p>[bittersweet@candyshop startpage]$ rm -rf ~/<span class="blinking">_</span></p>
+            </div>
+
+            <div class="searchbar">
+                <input type='text' class='searchField' placeholder='cd ~/' autofocus>
+            </div>
+
+            <div class="bookmarks">
+                <div class="category">
+                    <div class="links">
+                        <li class="title">Tools/</li>
+                        <li><a target="_blank" href="https://github.com/">github</a></li>
+                        <li><a target="_blank" href="https://pypi.org/">.pypi</a></li>
+                        <li><a target="_blank" href="https://nodejs.org/">nodejs</a></li>
+                        <li><a target="_blank" href="https://last.fm/">lastfm</a></li>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <div class="links">
+                        <li class="title"><a style="color: #C9CBFF" target="_blank" href="https://reddit.com">Reddit/</a></li>
+                        <li><a target="_blank" href="https://reddit.com/r/programming/">programming</a></li>
+                        <li><a target="_blank" href="https://reddit.com/r/programmerhumor/">programmerhumor</a></li>
+                        <li><a target="_blank" href="https://reddit.com/r/unixporn/">unixporn</a></li>
+                        <li><a target="_blank" href="https://reddit.com/r/memes/">memes</a></li>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <div class="links">
+                        <li class="title">Entertainment/</li>
+                        <li><a target="_blank" href="https://monkeytype.com/">monkeytype</a></li>
+                        <li><a target="_blank" href="https://open.spotify.com/">spotify</a></li>
+                        <li><a target="_blank" href="https://tidal.com/">tidal</a></li>
+                        <li><a target="_blank" href="https://movies4discord.xyz/">movies4discord</a></li>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="rat-holder">
+        <li><code>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp..----.._&nbsp&nbsp&nbsp&nbsp_</code></li>
+        <li><code>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp.'&nbsp.--.&nbsp&nbsp&nbsp&nbsp"-.(O)_</code></li>
+        <li><code>'-.__.-'"'=:|&nbsp&nbsp,&nbsp&nbsp_)_&nbsp\__&nbsp.&nbspc\'-..</code></li>
+        <li><code>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ''------'---''---'-"</code></li>
+    </div>
+</body>
+
+</html>
